@@ -1,12 +1,12 @@
 *** Settings ***
 Library        SeleniumLibrary
 Library        OperatingSystem
-Test Teardown  EntryInLog
+#Test Teardown  EntryInLog
 
 Default Tags   GlobalTraining
 
 *** Variables ***
-${AbsoluteTestSuiteLogPath}      C:/Users/%{username}/Desktop/testsuitelog.txt 
+#${AbsoluteTestSuiteLogPath}      C:/Users/%{username}/Desktop/testsuitelog.txt 
 
 ${URL}                https://opensource-demo.orangehrmlive.com/       #déclaration d'un     SCALAR
 @{CREDENTIALS}                   admin            admin123                        #déclaration d'une    LIST
@@ -50,7 +50,7 @@ TesLoginSelenium
 
 
 *** Keywords ***
-EntryInLog
-    ${time}=          Get Time
-    Append To File    ${AbsoluteTestSuiteLogPath}    ${time} | 
-    Append To File    ${AbsoluteTestSuiteLogPath}    ${TEST NAME}=>${TEST STATUS}\r
+#EntryInLog
+#    ${time}=          Get Time
+#    Append To File    ${AbsoluteTestSuiteLogPath}    ${time} | 
+#    Append To File    ${AbsoluteTestSuiteLogPath}    ${TEST NAME}=>${TEST STATUS}\r
