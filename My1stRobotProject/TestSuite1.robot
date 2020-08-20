@@ -8,9 +8,9 @@ Default Tags   GlobalTraining
 *** Variables ***
 ${AbsoluteTestSuiteLogPath}      C:/Users/%{username}/Desktop/testsuitelog.txt 
 
-${URL_CSR_Orange}                https://opensource-demo.orangehrmlive.com/       #déclaration d'un     SCALAR
-@{CREDENTIALS}                   admin    admin123                                #déclaration d'une    LIST
-&{MSISDN}                        PREPAID=0767251506    POSTPAID=0767251507        #déclaration d'un     DICTIONNARY
+${URL}                https://opensource-demo.orangehrmlive.com/       #déclaration d'un     SCALAR
+@{CREDENTIALS}                   admin            admin123                        #déclaration d'une    LIST
+&{MYDICTIONNARY}                 WORD1=premier    WORD2=deuxieme                  #déclaration d'un     DICTIONNARY
 
 *** Test Cases ***
 TestHelloWorld
@@ -32,11 +32,11 @@ MyThirdTest
     Close Browser
     Log               1st selenium complete
 
-TestLoginCSROperateur
+TesLoginSelenium
    
-    Open Browser                ${URL_CSR_Orange}                            chrome
+    Open Browser                ${URL}                                     chrome
     Set Browser Implicit Wait   1    
-    Input Text                  id=txtUsername                               ${CREDENTIALS}[0]
+    Input Text                  id=txtUsername                             ${CREDENTIALS}[0]
     Input Password              id=txtPassword                             ${CREDENTIALS}[1]
     Click Button                id=btnLogin
     Close Browser 
