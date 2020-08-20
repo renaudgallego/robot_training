@@ -24,6 +24,10 @@ MyThirdTest
     [Tags]            Training3
     Log               My third test !
 
+MyFourthTest
+    [Tags]            Training4
+    Log               My fourth test !
+
 1stSeleniumTest
     Open Browser      https://www.google.fr/    chrome
     Set Browser Implicit Wait                   1
